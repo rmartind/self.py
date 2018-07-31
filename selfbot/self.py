@@ -11,6 +11,12 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print(client.user.name)
+    serverss = client.servers
+    for server in serverss:
+        members = server.members
+        if server.id == '452565448534392849':
+            for member in members:
+                print(member.name)
 
 
 async def del_msg(chan):
